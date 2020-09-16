@@ -34,7 +34,11 @@ export class RegistryComponent implements OnInit {
   addUser(form: NgForm): void{
     console.log(this.user);
     this.service.postRegistrer(this.user).subscribe(res => {
-      console.log(res);
+      this.router.navigate(['/home']);
+    }, error => {
+      if (error.status === 500){
+        alert('No se pudo registrar el usuario.');
+      }
     });
     this.resert(form);
   }

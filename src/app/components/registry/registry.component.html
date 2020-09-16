@@ -6,7 +6,7 @@
           <img src="assets/uAttendance.png" width="100" class="rounded-circle card-img-top" alt="" loading="lazy">
         </div>
         <div class="card-content">
-          <form #userRegistrer="ngForm" (ngSubmit)="addUser(userRegistrer)">
+          <form #userRegistrer="ngForm">
             <div class="form-group">
               <input type="email" class="form-control" id="inputName" name="nombre" #nombre="ngModel" [(ngModel)]="user.nombre" aria-describedby="emailHelp" placeholder="Ingrese Nombre" autofocus>
             </div>
@@ -16,12 +16,23 @@
             </div>
             <div class="card">
               <div class="card-body">
-              </div>
-              <div class="card-footer">
-                <button type="submit" class="btn btn-primary" style="margin-left: 80px" (click)="capture()">Capturar</button>
+                <div class="container">
+                  <div class="d-flex flex-column align-items-center">
+                    <div class="p-1">
+                      <video #video class="vid" autoplay></video>
+                    </div>
+                    <div >
+                      <button class="btn btn-primary" (click)="capture()">Capture Image</button>
+                    </div>
+                    <div>
+                      <label>Captura a guardar</label>
+                      <canvas #canvas class="vid"></canvas>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary" style="margin-left: 100px">Registrarse</button>
+            <button type="submit" class="btn btn-primary" style="margin-left: 100px" (click)="addUser(userRegistrer)">Registrarse</button>
           </form>
         </div>
       </div>

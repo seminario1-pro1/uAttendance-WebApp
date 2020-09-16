@@ -14,5 +14,7 @@ export class ServiceService {
  postLogin(login: Login): Observable<any>{
     return this.http.post<any>(this.baseUrl + 'loginCreds', login);
  }
-
+ postRegistrer(user: Login): Observable<any>{
+    return this.http.post<any>(this.baseUrl + 'user/registrer', user);
+ }
 }

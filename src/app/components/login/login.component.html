@@ -1,7 +1,7 @@
 <div class="container-sm offset-md-4">
   <div class="row">
     <div class="col">
-      <div class="card rounded" style=" margin: 50px; width: 18rem">
+      <div class="card rounded" style=" margin: 50px; width: 19rem">
         <div class="card-header">
           <img src="assets/uAttendance.png" width="100" class="rounded-circle card-img-top" alt="" loading="lazy">
         </div>
@@ -14,11 +14,11 @@
               <input type="password" class="form-control" id="inputPass" name="contrasena" #contrasena="ngModel"
                      [(ngModel)]="userLogger.contrasena" placeholder="Ingrese Contraseña">
             </div>
-            <button type="submit" class="btn btn-primary btn-space" style="margin: 10px">Ingresar</button>
-            <button type="submit" class="btn btn-primary" style="margin: 5px">Ingresar por Imagen</button>
+            <button type="submit" class="btn btn-primary" style="margin-left: 100px">Ingresar</button>
           </form>
           <div>
             <button type="button" class="btn btn-light" routerLink="/registry">Registrarse</button>
+            <button type="submit" class="btn btn-light" style="margin: 5px" routerLink="/login-photo">Reconocimiento Facial</button>
           </div>
         </div>
       </div>

@@ -14,6 +14,11 @@ export class ServiceService {
  postLogin(login: Login): Observable<any>{
     return this.http.post<any>(this.baseUrl + 'loginCreds', login);
  }
+
+  postLoginPhoto(login: Login): Observable<any>{
+    return this.http.post<any>(this.baseUrl + 'loginPhoto', login);
+  }
+
  postRegistrer(user: Login): Observable<any>{
     return this.http.post<any>(this.baseUrl + 'user/registrer', user);
  }

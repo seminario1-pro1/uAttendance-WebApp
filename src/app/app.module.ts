@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { RegistryComponent } from './components/registry/registry.component';
+import { LoginPhotoComponent } from './components/login-photo/login-photo.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RegistryComponent } from './components/registry/registry.component';
     LoginComponent,
     HomeComponent,
     RegistryComponent,
+    LoginPhotoComponent,
   ],
   imports: [
     BrowserModule,

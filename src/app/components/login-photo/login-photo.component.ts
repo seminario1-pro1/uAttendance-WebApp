@@ -39,6 +39,8 @@ export class LoginPhotoComponent implements OnInit {
     }, error => {
       if (error.status === 500){
         alert('No se pudo validar el usuario.');
+      }else if (error.status === 401){
+        alert('No se pudo validar el usuario.');
       }
     });
     this.resert(form);

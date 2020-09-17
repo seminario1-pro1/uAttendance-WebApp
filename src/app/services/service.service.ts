@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Login } from '../models/login';
+import {Student} from '../models/student';
 
 @Injectable({
   providedIn: 'root'
@@ -22,4 +23,13 @@ export class ServiceService {
  postRegistrer(user: Login): Observable<any>{
     return this.http.post<any>(this.baseUrl + 'user/registrer', user);
  }
+
+ getStudents(): Observable<any> {
+    return this.http.get<any>(this.baseUrl + 'users');
+  }
+
+  postStudent(student: Student): Observable<any>{
+    return this.http.post<any>(this.baseUrl + 'student/registrer', student);
+  }
 }
+

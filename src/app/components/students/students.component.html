@@ -1,1 +1,73 @@
-<p>students works!</p>
+<div class="container-sm">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card rounded" style=" margin: 10px; width: 15rem">
+        <div class="card-header">
+          <img src="assets/uAttendance.png" width="100" class="rounded-circle card-img-top" alt="" loading="lazy">
+        </div>
+        <div class="card-content">
+          <form #userRegistrer="ngForm">
+            <div class="form-group">
+              <input type="email" class="form-control" id="inputName" name="nombre" #nombre="ngModel" [(ngModel)]="student.nombre" aria-describedby="emailHelp" placeholder="Ingrese Nombre Estudiante" autofocus>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <input
+                  accept=".png"
+                  style="display: none"
+                  type="file" (change)="onFileChanged($event)"
+                  #fileInput>
+                <button class="btn btn-success" (click)="fileInput.click()">Select File</button>
+                <button type="submit" class="btn btn-primary" style="margin-left: 10px" (click)="regitrar(userRegistrer)">Registrar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <div class="container-sm">
+        <div class="row row-cols-sm-2 row-cols-md-4">
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

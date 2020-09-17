@@ -29,7 +29,7 @@ export class ServiceService {
   }
 
   postStudent(student: Student): Observable<Student[]>{
-    return this.http.post<Student[]>('http://localhost:3000/student/registrer', student);
+    return this.http.post<Student[]>(this.baseUrl + 'student/registrer', student);
   }
 }
 

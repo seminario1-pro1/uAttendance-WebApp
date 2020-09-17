@@ -3,8 +3,14 @@
     <div class="col">
       <div class="card rounded" style=" margin: 50px; width: 18rem">
         <div class="card-header">
-          <img  src="assets/uAttendance.png" width="100" class="rounded-circle card-img-top" alt="" loading="lazy">
-          <canvas #canvas class="vid"></canvas>
+          <ng-container *ngIf="captura; else elseTemplate">
+            <img [src]="imagen"   width="250"  class="rounded-circle card-img-top"/>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <img src="assets/uAttendance.png" width="100" class="rounded-circle card-img-top" alt="" loading="lazy">
+          </ng-template>
+
+
         </div>
         <div class="card-content">
           <form #userRegistrer="ngForm">
@@ -15,7 +21,7 @@
               <input type="password" class="form-control" id="inputPass" name="contrasena" #contrasena="ngModel"
                      [(ngModel)]="user.contrasena" placeholder="Ingrese Contraseña">
             </div>
-            <div class="card">
+            <div class="card" style="height: 250px">
               <div class="card-body">
                 <div class="container">
                   <div class="d-flex flex-column align-items-center">
@@ -23,7 +29,8 @@
                       <video #video class="vid" autoplay></video>
                     </div>
                     <div >
-                      <button class="btn btn-primary" (click)="capture()">Capture Image</button>
+                      <button class="btn btn-primary" style="margin-left: 40px" (click)="capture()">Capture Image</button>
+                      <canvas style="visibility: hidden"  #canvas class="vid"></canvas>
                     </div>
                   </div>
                 </div>

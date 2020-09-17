@@ -12,7 +12,8 @@ import {NgForm} from '@angular/forms';
 export class RegistryComponent implements OnInit {
   @ViewChild('video', { static: true }) videoElement: ElementRef;
   @ViewChild('canvas', { static: true }) canvas: ElementRef;
-
+  public captura = false;
+  public imagen = '';
   constraints = {
     video: {
       facingMode: 'environment',
@@ -29,6 +30,8 @@ export class RegistryComponent implements OnInit {
 
   ngOnInit(): void {
     this.startCamera();
+    this.captura = false;
+    this.imagen = '';
   }
 
   addUser(form: NgForm): void{
@@ -65,7 +68,9 @@ export class RegistryComponent implements OnInit {
     this.renderer.setProperty(this.canvas.nativeElement, 'width', this.videoWidth);
     this.renderer.setProperty(this.canvas.nativeElement, 'height', this.videoHeight);
     this.canvas.nativeElement.getContext('2d').drawImage(this.videoElement.nativeElement, 0, 0);
+    this.captura = true;
     const image = this.canvas.nativeElement.toDataURL().toString();
+    this.imagen = this.canvas.nativeElement.toDataURL().toString();
     this.user.foto = image.substring(22, image.length);
     this.user.tipo = 'png';
   }

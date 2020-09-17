@@ -9,6 +9,9 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { RegistryComponent } from './components/registry/registry.component';
 import { LoginPhotoComponent } from './components/login-photo/login-photo.component';
+import { StudentsComponent } from './components/students/students.component';
+import { GroupsComponent } from './components/groups/groups.component';
+import { AssitsComponent } from './components/assits/assits.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { LoginPhotoComponent } from './components/login-photo/login-photo.compon
     HomeComponent,
     RegistryComponent,
     LoginPhotoComponent,
+    StudentsComponent,
+    GroupsComponent,
+    AssitsComponent,
   ],
   imports: [
     BrowserModule,

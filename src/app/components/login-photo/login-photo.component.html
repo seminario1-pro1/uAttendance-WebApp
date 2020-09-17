@@ -1,0 +1,37 @@
+<div class="container-sm offset-md-4">
+  <div class="row">
+    <div class="col">
+      <div class="card rounded" style=" margin: 50px; width: 18rem">
+        <div class="card-header">
+          <img src="assets/uAttendance.png" width="100" class="rounded-circle card-img-top" alt="" loading="lazy">
+        </div>
+        <div class="card-content">
+          <form #userRegistrer="ngForm">
+            <div class="form-group">
+              <input type="email" class="form-control" id="inputName" name="nombre" #nombre="ngModel" [(ngModel)]="user.nombre" aria-describedby="emailHelp" placeholder="Ingrese Nombre" autofocus>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="container">
+                  <div class="d-flex flex-column align-items-center">
+                    <div class="p-1">
+                      <video #video class="vid" autoplay></video>
+                    </div>
+                    <div >
+                      <button class="btn btn-primary" (click)="capture()">Capture Image</button>
+                    </div>
+                    <div>
+                      <label>Captura a validar</label>
+                      <canvas #canvas class="vid"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-left: 100px" (click)="login(userRegistrer)">Iniciar Sesion</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

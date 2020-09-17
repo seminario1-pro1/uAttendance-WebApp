@@ -9,7 +9,7 @@ import {Student} from '../models/student';
 })
 export class ServiceService {
 
-  readonly baseUrl = 'http://3.15.238.156:3000/';
+  readonly baseUrl = 'http://lb-uattendance-semi1-2105757266.us-east-2.elb.amazonaws.com:3000/';
   constructor(private http: HttpClient) { }
 
  postLogin(login: Login): Observable<any>{

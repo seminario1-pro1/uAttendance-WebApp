@@ -13,6 +13,7 @@ export class StudentsComponent implements OnInit {
   }
 
   student = new Student();
+  students: Student[];
   selectedFile: File;
 
   ngOnInit(): void {
@@ -25,6 +26,7 @@ export class StudentsComponent implements OnInit {
     let reader = new FileReader();
     reader.readAsDataURL(this.selectedFile);
     reader.onload = () => {
+      this.student.foto = reader.result.toString().substring(22, reader.result.toString().length);
       this.student.base64 = reader.result.toString().substring(22, reader.result.toString().length);
     };
     reader.onerror = function(error) {
@@ -35,20 +37,29 @@ export class StudentsComponent implements OnInit {
   // tslint:disable-next-line:typedef
   regitrar(form: NgForm) {
     this.student.nombre = form.value.nombre;
-    this.student.foto = form.value.nombre + 'png';
     this.student.tipo = 'png';
-
     this.service.postStudent(this.student).subscribe(res => {
+      this.getStudents();
       console.log(res);
+    }, error => {
+      if (error.status === 500){
+        alert('No se pudo listar los estudiantes.');
+      }
     });
     this.getStudents();
 
     form.resetForm();
   }
 
+  // tslint:disable-next-line:typedef
   getStudents(){
     this.service.getStudents().subscribe(res => {
       console.log(res);
+      this.students = res.Items as Student[];
+    }, error => {
+      if (error.status === 500){
+        alert('No se pudo listar los estudiantes.');
+      }
     });
   }
 }

@@ -54,3 +54,28 @@
 >> HTTP	3000	HTTP	3000	N/A	N/A
 
 >> ![texto alternativo](./src/assets/pinglb.png)
+
+# Endpoints API Gateway
+
+>> obtenerAsistencias
+
+>>> https://v3jx6tlas9.execute-api.us-east-2.amazonaws.com/prod/obtenerasistencias
+
+>> obtenerFotosGrupales
+
+>>> https://v3jx6tlas9.execute-api.us-east-2.amazonaws.com/prod/obtenerfotosgrupales
+
+>> registrarFotoGrupal
+
+>>> https://v3jx6tlas9.execute-api.us-east-2.amazonaws.com/prod/registrarfotogrupal
+
+# Buckets S3
+
+>> pro1-sitio-web-grupo16
+
+>>> http://pro1-sitio-web-grupo16.s3-website.us-east-2.amazonaws.com
+
+>> pro1-images-grupo16
+
+>>> http://pro1-images-grupo16.s3-website.us-east-2.amazonaws.com
+

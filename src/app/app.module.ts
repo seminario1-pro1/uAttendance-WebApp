@@ -12,6 +12,8 @@ import { LoginPhotoComponent } from './components/login-photo/login-photo.compon
 import { StudentsComponent } from './components/students/students.component';
 import { GroupsComponent } from './components/groups/groups.component';
 import { AssitsComponent } from './components/assits/assits.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { AssitsComponent } from './components/assits/assits.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

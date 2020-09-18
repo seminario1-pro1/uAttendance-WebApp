@@ -34,7 +34,7 @@ export class RegistryComponent implements OnInit {
     this.imagen = '';
   }
 
-  addUser(form: NgForm): void{
+  addUser(form: NgForm){
     console.log(this.user);
     this.service.postRegistrer(this.user).subscribe(res => {
       console.log(res);

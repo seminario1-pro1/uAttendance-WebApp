@@ -29,14 +29,14 @@
                       <video #video class="vid" autoplay></video>
                     </div>
                     <div >
-                      <button class="btn btn-primary" style="margin-left: 40px" (click)="capture()">Capture Image</button>
+                      <button class="btn btn-primary" style="margin-left: 40px" (click)="capture()">Capture Image</button>                      
+                      <button type="submit" class="btn btn-primary" style="margin-left: 50px; margin-top: 10px;" (click)="addUser(userRegistrer)">Iniciar Sesion</button>
                       <canvas style="visibility: hidden"  #canvas class="vid"></canvas>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <button type="submit" class="btn btn-primary" style="margin-left: 100px" (click)="addUser(userRegistrer)">Registrarse</button>
+            </div>           
           </form>
         </div>
       </div>
